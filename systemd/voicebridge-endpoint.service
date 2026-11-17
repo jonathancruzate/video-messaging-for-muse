@@ -1,0 +1,12 @@
+[Unit]
+Description=Video Messaging for Muse endpoint (vb audio graph, VB_Camera feeder, voice Chrome)
+After=pipewire.service wireplumber.service pipewire-pulse.service
+Wants=pipewire.service wireplumber.service pipewire-pulse.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=%h/voicebridge/scripts/start-endpoint.sh
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,5 @@
+profiles/
+*.mp4
+*.log
+*.png
+node_modules/
